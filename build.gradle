@@ -1,0 +1,56 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// Define versions in a single place
+ext {
+    // Sdk and tools
+    minSdkVersion = 14
+    targetSdkVersion = 27
+    compileSdkVersion = 27
+    buildToolsVersion = '27.0.1'
+
+    // App dependencies
+    supportLibraryVersion = '27.0.2'
+
+    retrofitVersion = '2.3.0'
+    glideVersion = '4.3.1'
+    gsonVersion = '2.8.2'
+    daggerVersion = '2.8'
+    rxandroidVersion = '1.2.1'
+    rxjavaVersion = '1.3.0'
+    butterknifeVersion = '8.8.1'
+    annotationVersion = '1.0'
+    annotationJavaxVersion = '10.0-b28'
+
+    junitVersion = '4.12'
+    scrollparallaximageviewVersion = '1.0'
+}
